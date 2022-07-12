@@ -3,6 +3,9 @@ article {
     flex-direction: column;
 }
 
+.start{
+    margin-top: 10%;
+}
 
 .question {
     display: none;
@@ -17,3 +20,33 @@ article {
     height : 300px;
     margin : 0 auto;
 }
+
+.share {
+    margin : 0 auto;
+}
+
+.kakao_ad{
+    width: 320px;
+    margin: 0 auto;
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.banner-img {
+    width: 300px;
+}
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.character-img{
+    max-width: 100%;
+    height: auto;
+}
+  

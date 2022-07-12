@@ -8,13 +8,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>나랑 꼭 닮은 애니 캐릭터 테스트</title>
+    <meta name="description" content="나랑 꼭 닮은 애니 캐릭터는 누굴까? MBTI를 기반으로 테스트해보세요!">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="나랑 꼭 닮은 애니 캐릭터 테스트">
+    <meta property="og:description" content="나랑 꼭 닮은 애니 캐릭터는 누굴까? MBTI를 기반으로 테스트해보세요!">
+    <meta property="og:image" content="https://cartooncharacter.netlify.app/FQJAb0pagAYUWIY.jpeg">
+    <meta property="og:url" content="https://cartooncharacter.netlify.app/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="container">
         <article class="start">
-            <h1 class="mt-5 text-center">나랑 꼭 닮은 세렝게티 동물은?</h1>
+            <h1 class="text-center">나랑 꼭 닮은 애니 캐릭터는 누굴까?</h1>
             <button type="button" class="btn btn-primary mt-5" onclick="start()">시작하기</button>
         </article>    
         <article class="question">
@@ -32,29 +38,64 @@
         <input type="hidden" id="JP" value="0">
 
         <article class="result">
-            <img id="img" class="rounded-circle mt-5" src="wolf.jpg" alt="">
-            <h2 id="animal" class="text-center mt-5">동물이름</h2>
-            <h3 id="explain" class="text-center mt-5">설명</h3>        
+            <img id="img" class="character-img mt-5" src="wolf.jpg" alt="">
+            <h2 id="character" class="result-character text-center mt-4 mb-4">캐릭터 이름</h2>
+            <h3 id="explain" class="result-explain text-center mt-4 mb-4">설명</h3>   
+            
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+            <div class="share addthis_inline_share_toolbox mt-5"></div>
+                 
         </article>
+        <article class="kakao_ad mt-5">
+            <ins class="kakao_ad_area" style="display:none;" 
+            data-ad-unit    = "DAN-pVDORKVnmoGeZFQr" 
+            data-ad-width   = "320" 
+            data-ad-height  = "100"></ins>
+        </article>
+        <a class="mt-5 banner" href="https://www.codelion.net/catalog/Q291cnNlTm9kZTpqbW9r?utm_source=animal_test&utm_medium=web_lecture&utm_campaign=ekffo0204@likelion.org">
+            <img class="banner-img" src="banner_9VLPMjprjq3.png" alt="banner">
+        </a>
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+       
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
         <script>
             var num=1;
             var q={
-                1:{"title":"문제 1","type":"EI","A":"E","B":"I"},
-                2:{"title":"문제 2","type":"EI","A":"E","B":"I"},
-                3:{"title":"문제 3","type":"EI","A":"E","B":"I"},
-                4:{"title":"문제 4","type":"SN","A":"S","B":"N"},
-                5:{"title":"문제 5","type":"SN","A":"S","B":"N"},
-                6:{"title":"문제 6","type":"SN","A":"S","B":"N"},
-                7:{"title":"문제 7","type":"TF","A":"T","B":"F"},
-                8:{"title":"문제 8","type":"TF","A":"T","B":"F"},
-                9:{"title":"문제 9","type":"TF","A":"T","B":"F"},
-                10:{"title":"문제 10","type":"JP","A":"J","B":"P"},
-                11:{"title":"문제 11","type":"JP","A":"J","B":"P"},
-                12:{"title":"문제 12","type":"JP","A":"J","B":"P"},
+                1:{"title":"1. 종강 후 기다리던 방학! 가장 하고 싶었던 것은?","type":"EI","A":"친구들과 함께 여행! 또는 친구들이랑 맛있는 거 놀러가기!","B":"집에서 혼자만의 취미를 즐기며 유유자적한 시간 보내기!"},
+                2:{"title":"2. 과제는 혼자서 or 친구들이랑 스터디 모임?","type":"EI","A":"친구들이랑 같이 해야 더 효과적!","B":"혼자서 하는 게 편하지!"},
+                3:{"title":"3. 많은 사람들과의 식사 시간이 어떻게 느껴지는지?","type":"EI","A":"다양한 사람들과 소통할 수 있어서 너무 재밌다!","B":"많은 사람들과 있으면 기가 빨려서 소수의 사람들과 함께하는 게 좋아!"},
+                4:{"title":"4. 만약 종이랑 비닐 중 하나만 타고 썰매를 타야 한다면 둘 중 고르는 것은?","type":"SN","A":"아니 탈 일이 없는데 그걸 왜 골라야 해..?","B":"비닐이 더 낫지 않을까..? 종이가 얼마나 두꺼워? 진지하게 고민"},
+                5:{"title":"5. 리더인 내가 새로운 팀원을 뽑을 때 더 중시하는 것은?","type":"SN","A":"이 사람이 지금까지 쌓은 경력을 기반으로 평가한다!","B":"이 사람에 대해 잘 알진 못하지만 잠재성과 가능성을 기반으로 평가한다!"},
+                6:{"title":"6. 상상을 할 때 나의 모습은 주로?","type":"SN","A":"원하는 기업에 취업해서 승승장구하는 나","B":"지구 최고의 먼치킨이 되어 악당들을 멋지게 쓰러뜨리는 나"},
+                7:{"title":"7. 친구한테 힘들다고 연락이 왔을 때 가장 먼저하는 대답은?","type":"TF","A":"왜 무슨 일인데 그래?","B":"그래 무슨 일인지 몰라도 많이 힘들지? 걱정마 난 항상 네 편이야!"},
+                8:{"title":"8. 결과와 과정 둘 중 더 중요한 것은?","type":"TF","A":"결과가 안 좋으면 소용없다! 결과가 더 중요","B":"결과에 상관없이 과정이 더 의미 있다!"},
+                9:{"title":"9. '나 힘들게 돈 모아서 차 샀어' 이 문장에서 더 눈에 들어오는 것은?","type":"TF","A":"나 '차 샀어'","B":"나 '힘들게 돈 모아서'"},
+                10:{"title":"10. 여행할 때 계획은 ","type":"JP","A":"출발하기 전부터 일정을 구체적으로 짜는 걸 선호한다!","B":"일단 여행지에 도착하고 그때 그때 다음 일정을 정하는 걸 선호한다!"},
+                11:{"title":"11. 오늘 하루 일정을 세웠는데 갑자기 급한 업무가 생겨 일정이 틀어졌을 때 나는,","type":"JP","A":"내 예상대로 하루가 진행되지 않아서 화가 먼저 난다!","B":"어떻게 계획한대로만 흘러가냐~ 아무 타격없음!"},
+                12:{"title":"12. 회의를 하는데 회의 주제와 상관없는 얘기로 흘러가면..","type":"JP","A":"빨리 회의 주제로 돌아오고 싶다.","B":"잠깐 다른 얘기로 샐 수도 있지! "},
             }
+
+            var result={
+                "ISTP":{"character":"<strong>하타케 카카시 by 나루토</strong>", "explain":"나뭇잎 마을의 상급닌자 하타케 카카시! 평소엔 차분하고 느긋하지만, 전투에 돌입하면 냉정한 프로의 모습을 보여주는 반전매력의 인물입니다. 공사구분이 확실하지만 평소엔 편하고 격식을 차리지 않는 것을 좋아합니다. 당신과 닮은 캐릭터 하타케 카카시가 등장하는 만화 ‘나루토’ 보러 가지 않을래요?", "img":"kakasi.jpeg"},
+                "ISTJ":{"character":"<strong>츠키시마 케이 by 하이큐!!</strong>", "explain":"타고난 피지컬과 두뇌를 갖춘 배구선수 츠키시마 케이! 평소 냉소적인 태도로 타인을 비꼬기도 하고감정을 잘 드러내지 않지만 에너지가 내면으로 향하는 I형답게 자신 안에서 끊임없이 질문을 던지고, 자신을 돌아보는 인물입니다. 당신과 닮은 캐릭터 츠키시마 케이가 등장하는 만화 ‘하이큐!!’ 보러 가지 않을래요?", "img":"kai.jpg"},
+                "ISFP":{"character":"<strong>노자키 우메타로 by 월간순정 노자키군</strong>", "explain":"190cm의 무서운 인상의 고등학생 노자키! 사실은 순정만화를 연재하는 만화가랍니다. 만화가답게 다양한 상황에 감정이입하여 상상을 하는 게 주된 일상이에요. 만화 소재를 얻기 위해서라면 뭐든지 즉흥적으로 시도해보는 자유로운 영혼의 소유자입니다. 당신과 닮은 캐릭터 노자키가 등장하는 만화 ‘월간순정 노자키군’ 보러 가지 않을래요? ", "img":"nozaki.jpeg"},
+                "ISFJ":{"character":"<strong>롤로노아 조로 by 원피스</strong>", "explain":"세계 최강의 검사 롤로노아 조로! 자신의 목표를 위해선 끊임없이 스스로를 채찍질하는 노력파입니다. 또한 과묵하고 속마음을  잘 드러내지 않지만 누구보다 동료를 아끼고 있어서 자신의 야망과 동료 중 동료를 우선으로 생각하는 사려 깊은 인물입니다. 당신과 닮은 캐릭터 조로가 등장하는 만화 ‘원피스’  보러 가지 않을래요?", "img":"joro.jpeg"},
+                "INTP":{"character":"<strong>엘 by 데스노트</strong>", "explain":"과묵한 아싸지만 엄청난 천재인 엘! 겉모습처럼 자기만의 세계가 확실합니다. 자신이 무엇에 재능이 있는지 너무 잘 알고 있어서 굳이 티 내지는 않아도 포스가 느껴집니다. 당신과 닮은 캐릭터 L이 등장하는 만화 '데스노트' 보러 가지 않을래요?", "img":"l.png"},
+                "INTJ":{"character":"<strong>로이드 포저 by 스파이 패밀리</strong>", "explain":"용의주도한 최고의 스파이 로이드 포저! 항상 신중한 자세를 유지하고 계획대로 움직이는 전략가입니다. 그를 아는 사람은 그를 신뢰하게 되죠! 당신과 닮은 캐릭터 로이드 포저가 등장하는 만화 ‘스파이 패밀리’ 보러 가지 않을래요?", "img":"loid.webp"},
+                "INFP":{"character":"<strong>요르 포저 by 스파이 패밀리</strong>", "explain":"조용하지만 작중 최강의 능력을 가진 요르 포저! 끝없는 상상력으로 상황을 예측하고 때론 엉뚱한 판단을 하는 것 또한 그녀의 반전매력입니다. 뿐만 아니라 상대방의 감정에 잘 공감해 주는 사려 깊은 인물입니다. 당신과 닮은 캐릭터 요르 포저가 등장하는 만화 ‘스파이 패밀리’ 보러 가지 않을래요?", "img":"yor.jpg"},
+                "INFJ":{"character":"<strong>맹구 by 짱구는 못말려</strong>", "explain":"자기만의 세계가 확실한 매력적인 맹구! 공상을 좋아하며, 속마음을 잘 들어내진 않지만, 친구들의 마음에 잘 공감해줄 줄 아는 캐릭터입니다. 당신과 닮은 캐릭터 맹구가 나오는 만화 '짱구는 못말려' 보러 가지 않을래요?", "img":"manggu.png"},
+                "ESTP":{"character":"<strong>한애숙 by 아따맘마</strong>", "explain":"거침없는 성격으로 가족들을 제압하는 한애숙! 전업주부이지만 계획대로 하루를 보내기보단 그 때 그 때 할 일이 떠오르면 하는 프리한 성향을 가지고 있습니다. 당신과 닮은 캐릭터 한애숙이 나오는 만화 '아따맘마' 보러 가지 않을래요?", "img":"mama.jpg"},
+                "ESTJ":{"character":"<strong>유바바 by 센과 치히로의 행방불명</strong>", "explain":"카리스마 넘치는 악역 유바바! 그녀의 하루는 철저히 계획한 대로 이루어져야 합니다. 또한 약속한 것은 반드시 지켜야하며 그것을 어길 시 댓가를 치루게 하는 인물입니다. 당신과 닮은 캐릭터 유바바가 등장하는 '센과 치히로의 행방불명' 보러 가지 않을래요?", "img":"yubaba.jpeg"},
+                "ESFP":{"character":"<strong>나미 by 원피스</strong>", "explain":"똑부러진 성격의 나미! 도둑 고양이라는 별명답게 잔머리를 잘 굴리며 내실도 챙기는 성격입니다. 모험을 좋아하는 여장군이며 다양한 지식을 겸비하고 있습니다. 또한 자신의 목숨보다 동료를 우선시할 정도로 동료애가 강합니다.  당신과 닮은 캐릭터 나미가 등장하는 만화 ‘원피스’ 보러 가지 않을래요?", "img":"nami.png"},
+                "ESFJ":{"character":"<strong>히나타 쇼요 by 하이큐!!</strong>", "explain":"운동선수답게 루틴을 잘 지키고 불같은 열정을 가진 히나타! 한번도 아침 훈련에 지각한 적 없으며 경기에서 지면 이성적인 태도를 취하기보단 분한 감정을 이기지 못합니다. 당신과 닮은 캐릭터 히나타 쇼요가 등장하는 만화 '하이큐!!' 보러 가지 않을래요?", "img":"hinata.png"},
+                "ENTP":{"character":"<strong>짱구 by 짱구는 못말려</strong>", "explain":"모험가 성향의 짱구! 처음보는 사람과도 대화를 잘 이어 나가며 흥미로워 보이는 것은 즉흥적으로 시도해보는 자유로운 영혼입니다. 당신과 닮은 캐릭터 짱구가 등장하는 만화 '짱구는 못말려' 보러 가지 않을래요?", "img":"jjanggu.png"},
+                "ENTJ":{"character":"<strong>야가미 라이토 by 데스노트</strong>", "explain":"완벽주의 성향의 천재 야가미 라이토! 높은 프라이드와 선민의식을 갖춘 인물이지만, 타고난 외모와 지능, 능력을 고려하면 이해가 되기도 하는 부분입니다. 자신의 뛰어난 지능을 이용하여 뭐든지 조종할 수 있는 인물이기도 합니다. 당신과 닮은 캐릭터 라이토가 등장하는 만화 ‘데스노트’ 보러 가지 않을래요?", "img":"laito.jpg"},
+                "ENFJ":{"character":"<strong>본드 포저 by 스파이 패밀리</strong>", "explain":"다른 이들과 잘 어울리며 다툼이 일어나면 먼저 사과를 할 줄 아는 본드 포저! 미래를 예측할 수 있는 능력을 가지고 있어 이 능력을 기반으로 엉뚱한 상상의 나래를 펼치는 게 본드의 매력입니다. 당신과 닮은 캐릭터 본드가 등장하는 만화 ‘스파이 패밀리’ 보러 가지 않을래요?", "img":"bond.webp"},
+                "ENFP":{"character":"<strong>아냐 포저 by 스파이 패밀리</strong>", "explain":"활발하고 귀여운 독심술사 아냐 포저! 다른 사람의 마음을 읽어서 상대방의 감정을 이해하거나 혼자 상상의 나래를 펼치기도 합니다. 하지만 때론 너무 허황된 상상에 빠지기도 하죠. 하지만 무엇이든 즉흥적으로 시도해도 척척 해내는 똑똑한 소녀입니다. 당신과 닮은 캐릭터 아냐 포저가 등장하는 만화 ‘스파이 패밀리’ 보러 가지 않을래요?", "img":"anya.png"},
+               }
+
             function start(){
                 $(".start").hide();
                 $(".question").show();
@@ -79,13 +120,17 @@
                     $(".result").show();
                     var mbti="";
                     ($("#EI").val() <2) ? mbti+="I" : mbti+="E";
-                    ($("#SN").val() <2) ? mbti+="S" : mbti+="N";
-                    ($("#TF").val() <2) ? mbti+="T" : mbti+="F";
-                    ($("#JP").val() <2) ? mbti+="J" : mbti+="P";
-                    alert(mbti);
+                    ($("#SN").val() <2) ? mbti+="N" : mbti+="S";
+                    ($("#TF").val() <2) ? mbti+="F" : mbti+="T";
+                    ($("#JP").val() <2) ? mbti+="P" : mbti+="J";
+
                     $("#img").attr("src",result[mbti]["img"]);
-                    $("#animal").html("src",result[mbti]["animal"]);
-                    $("#explain").attr("src",result[mbti]["explain"]);
+                    $("#character").html(result[mbti]["character"]);
+                    $("#explain").html(result[mbti]["explain"])
+                    
+
+                    
+                    
                 } else{
                     $(".progress-bar").attr('style', 'width: calc(100/12*'+num+ '%');
                     $("#title").html(q[num]["title"]);
@@ -94,11 +139,11 @@
                     $("#B").html(q[num]["B"]);
                     num++;
                 }
-               var result={
-                "ISTJ":{"animal":"하마", "expalin":"하마 설명", "img":"wolf.jpg"}
-               }
-
+               
             }
         </script>
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-62c7a26b83915796"></script>
+
 </body>
 </html>
